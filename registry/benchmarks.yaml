@@ -1,0 +1,183 @@
+schema_version: 1
+registry_updated: "2026-08-22"
+
+benchmarks:
+  - id: cis-ubuntu-2404
+    vendor: CIS
+    product: Ubuntu Linux
+    version: "2.0.0"
+    platform: ubuntu
+    release: "24.04"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/ubuntu_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: cis-ubuntu-2204
+    vendor: CIS
+    product: Ubuntu Linux
+    version: "3.0.0"
+    platform: ubuntu
+    release: "22.04"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/ubuntu_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: cis-debian-13
+    vendor: CIS
+    product: Debian Linux
+    version: "1.0.0"
+    platform: debian
+    release: "13"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/debian_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: cis-debian-12
+    vendor: CIS
+    product: Debian Linux
+    version: "2.0.0"
+    platform: debian
+    release: "12"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/debian_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: cis-rhel-10
+    vendor: CIS
+    product: Red Hat Enterprise Linux
+    version: "1.0.1"
+    platform: rhel
+    release: "10"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/red_hat_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: cis-rhel-9
+    vendor: CIS
+    product: Red Hat Enterprise Linux
+    version: "2.0.0"
+    platform: rhel
+    release: "9"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/red_hat_linux
+    license: verify-before-redistribution
+    status: verify
+
+  - id: cis-rhel-8
+    vendor: CIS
+    product: Red Hat Enterprise Linux
+    version: "4.0.0"
+    platform: rhel
+    release: "8"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/red_hat_linux
+    license: verify-before-redistribution
+    status: verify
+
+  - id: cis-rocky-10
+    vendor: CIS
+    product: Rocky Linux
+    version: "1.0.0"
+    platform: rocky
+    release: "10"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/rocky_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: cis-rocky-9
+    vendor: CIS
+    product: Rocky Linux
+    version: "2.0.0"
+    platform: rocky
+    release: "9"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/rocky_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: cis-rocky-8
+    vendor: CIS
+    product: Rocky Linux
+    version: "3.0.0"
+    platform: rocky
+    release: "8"
+    content_type: benchmark
+    source: official
+    source_url: https://www.cisecurity.org/benchmark/rocky_linux
+    license: verify-before-redistribution
+    status: current
+
+  - id: mitre-attack-enterprise
+    vendor: MITRE
+    product: ATT&CK Enterprise
+    version: "19.2"
+    content_type: threat-intelligence
+    source: official
+    source_url: https://attack.mitre.org/
+    license: verify-before-redistribution
+    status: current
+
+frameworks:
+  - id: nist-csf
+    vendor: NIST
+    version: "2.0"
+    content_type: framework
+    source_url: https://www.nist.gov/cyberframework
+
+  - id: iso-27001
+    vendor: ISO/IEC
+    version: "2022"
+    content_type: framework
+    source: official
+    license: verify-before-redistribution
+
+india:
+  - id: cert-in-directions
+    vendor: CERT-In
+    content_type: regulation
+    source: official
+    source_url: https://www.cert-in.org.in/
+    status: continuously-updated
+
+  - id: dpdp-act
+    vendor: Government of India
+    content_type: regulation
+    source: official
+    source_url: https://www.meity.gov.in/
+    status: continuously-updated
+
+  - id: rbi-it-governance
+    vendor: RBI
+    content_type: sector-regulation
+    source: official
+    source_url: https://www.rbi.org.in/
+    status: continuously-updated
+
+  - id: sebi-cscrf
+    vendor: SEBI
+    content_type: sector-regulation
+    source: official
+    source_url: https://www.sebi.gov.in/
+    status: continuously-updated
+
+  - id: irdai-cyber-security
+    vendor: IRDAI
+    content_type: sector-regulation
+    source: official
+    source_url: https://irdai.gov.in/
+    status: continuously-updated
