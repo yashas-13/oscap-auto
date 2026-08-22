@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pravidh Audit — Linux Compliance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">P</span><div><strong>Pravidh Audit</strong><small>OS Compliance</small></div></div>
+    <nav>
+      <a class="active" href="#overview">Overview</a>
+      <a href="#servers">Servers</a>
+      <a href="#findings">Findings <b>12</b></a>
+      <a href="#compliance">Compliance</a>
+      <a href="#remediation">Remediation</a>
+      <a href="#reports">Reports</a>
+      <a href="#history">History</a>
+    </nav>
+    <div class="sidebar-foot">Local-first • No cloud required</div>
+  </aside>
+
+  <main>
+    <header class="topbar"><div><span class="eyebrow">SECURITY OPERATIONS</span><h1>Linux Security Overview</h1></div><div class="actions"><button class="ghost">Export</button><button class="primary" onclick="scan()">Run Scan</button></div></header>
+
+    <section id="overview" class="grid stats">
+      <article class="card score"><div><span class="label">SECURITY SCORE</span><div class="score-row"><strong>78</strong><span>/100</span></div><small>+6 points since last scan</small></div><div class="ring"><span>78%</span></div></article>
+      <article class="card"><span class="label">CRITICAL</span><strong class="metric danger">12</strong><small>5 servers affected</small></article>
+      <article class="card"><span class="label">HIGH</span><strong class="metric warning">31</strong><small>18 servers affected</small></article>
+      <article class="card"><span class="label">SERVERS</span><strong class="metric">24</strong><small>22 healthy • 2 degraded</small></article>
+    </section>
+
+    <section class="grid main-grid">
+      <article class="card large" id="compliance"><div class="section-head"><div><span class="label">COMPLIANCE POSTURE</span><h2>Framework readiness</h2></div><select><option>CIS Linux</option><option>ISO 27001</option><option>NIST</option></select></div>
+        <div class="bars"><div><span>CIS Linux <b>82%</b></span><i><em style="width:82%"></em></i></div><div><span>ISO 27001 <b>74%</b></span><i><em style="width:74%"></em></i></div><div><span>NIST <b>79%</b></span><i><em style="width:79%"></em></i></div></div>
+      </article>
+      <article class="card large" id="history"><div class="section-head"><div><span class="label">SECURITY TREND</span><h2>Last 7 scans</h2></div><span class="trend">↗ +9</span></div><div class="chart"><div class="line"></div><div class="chart-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></article>
+    </section>
+
+    <section class="card" id="findings"><div class="section-head"><div><span class="label">ACTION REQUIRED</span><h2>Top findings</h2></div><button class="ghost">View all 94</button></div>
+      <div class="table"><div class="tr th"><span>Finding</span><span>Asset</span><span>Severity</span><span>Control</span><span>Status</span></div>
+      <div class="tr"><span><b>Root SSH login enabled</b><small>PermitRootLogin yes</small></span><span>db-prod-01</span><span class="pill red">CRITICAL</span><span>CIS 5.2</span><span class="pill red">Failed</span></div>
+      <div class="tr"><span><b>Firewall disabled</b><small>nftables inactive</small></span><span>api-prod-01</span><span class="pill red">CRITICAL</span><span>CIS 4.1</span><span class="pill red">Failed</span></div>
+      <div class="tr"><span><b>Security updates pending</b><small>14 packages</small></span><span>web-prod-01</span><span class="pill amber">HIGH</span><span>CIS 1.9</span><span class="pill amber">Open</span></div>
+      <div class="tr"><span><b>World-writable directory</b><small>/opt/shared</small></span><span>app-prod-02</span><span class="pill amber">HIGH</span><span>CIS 6.1</span><span class="pill amber">Open</span></div></div>
+    </section>
+
+    <section class="card" id="servers"><div class="section-head"><div><span class="label">FLEET</span><h2>Servers</h2></div><button class="ghost">Manage agents</button></div>
+      <div class="table"><div class="tr th"><span>Server</span><span>OS</span><span>Score</span><span>Findings</span><span>Health</span></div>
+      <div class="tr"><span><b>web-prod-01</b></span><span>Ubuntu 24.04</span><span class="good">91</span><span>0 critical</span><span class="online">● Online</span></div>
+      <div class="tr"><span><b>api-prod-01</b></span><span>Debian 12</span><span class="warning-text">76</span><span>2 critical</span><span class="online">● Online</span></div>
+      <div class="tr"><span><b>db-prod-01</b></span><span>RHEL 9</span><span class="danger-text">64</span><span>5 critical</span><span class="degraded">● Degraded</span></div></div>
+    </section>
+
+    <section class="card ai" id="remediation"><div class="ai-icon">✦</div><div><span class="label">AI SECURITY ASSISTANT</span><h2>Start with the highest-impact fix</h2><p>DB-PROD-01 has 5 critical findings. Disabling root SSH access is the highest-priority remediation and affects 1 server.</p></div><button class="primary" onclick="previewFix()">Preview Fix</button></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
